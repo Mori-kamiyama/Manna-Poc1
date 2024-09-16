@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四角形を書こう</title>
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Prism.jsのスタイルシートを追加 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <!-- Prism.jsのスクリプトを追加 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- C言語用のプラグインを追加 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <link rel="icon" href="../logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <button onclick="location.href='../index.html'" style="cursor: pointer;">
+            <img src="../Icon.png" class="logo">
+        </button>
+        <div class="date-info">
+            <p>Sunday, September 1, 2024</p>
+            <p>No.32</p>
+        </div>
+    </header>
+    <hr>
+    <hr>
+    <main>
+        <div class="title">
+            <h2>No.010</h2>
+        </div>
+        <h1>四角形を書こう</h1>
+        <p class="statement">図形描画アプリを作ります。手始めに、自由な位置に３×３の四角を表示させて下ださい
+        </p>
+
+        <div class="example">
+            <div class="title">
+                <h2>実行例</h2>
+            </div>
+            <div class="inout-container">
+                <pre class="inout">
+<b>Input1</b>
+->x = 3
+->y = 5</pre>
+                <p class="arrow">=></p>
+                <pre class="inout">
+<b>Output1</b>
+_______________
+_______________
+_______________
+_@@@___________
+_@@@___________
+_@@@___________
+_______________
+_______________</pre>
+            </div>
+        </div>
+
+        <div class="code">
+            <button onclick="answer()" class="answer-button" style="cursor: pointer;">RUN</button>
+            <div id="answer">
+                <h2>回答</h2>
+                <pre class="answer"><code class="language-c">
+#include <stdio.h>
+
+int main() {
+    int x, y;
+
+    // ユーザーからxとyの入力を受け取る
+    printf("xの値を入力してください: ");
+    scanf("%d", &x);
+    printf("yの値を入力してください: ");
+    scanf("%d", &y);
+
+    // y行分の「_」行を出力
+    for (int i = 0; i < y; i++) {
+        for (int j = 0; j < x + 3; j++) {  // 全幅分の「_」を出力
+            printf("_");
+        }
+        printf("\n");
+    }
+
+    // 3x3の四角を描画
+    for (int i = 0; i < 3; i++) {
+        // x列分の「_」を出力
+        for (int j = 0; j < x; j++) {
+            printf("_");
+        }
+        // 3つの '@' を出力して改行
+        printf("@@@\n");
+    }
+
+    // 残りの行の「_」を出力
+    for (int i = y + 3; i < 8; i++) {  // 全体の高さは任意で8に設定
+        for (int j = 0; j < x + 3; j++) {
+            printf("_");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+                </code></pre>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function answer() {
+            var div = document.getElementById("answer");
+            if (div.style.display === "none") {
+                div.style.display = "block";  // 表示にする
+            } else {
+                div.style.display = "none";   // 非表示にする
+            }
+        }
+    </script>
+</body>
+</html>

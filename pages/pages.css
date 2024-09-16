@@ -1,0 +1,105 @@
+body {
+    width: 80%;
+    margin: auto;
+}
+
+main {
+    margin: auto;
+    width: 80%;
+    margin-top: 10vh;
+}
+
+.title {
+    background-color: #333333;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.title h2 {
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.statement {
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.example {
+    margin-top: 5vh;
+}
+
+.inout-container {
+    display: grid;
+    grid-template-columns: 5fr 1fr 5fr;
+    column-gap: 50px;
+    font-family: "IBM Plex Mono", monospace;
+    line-height: 1.7em;
+    letter-spacing: 0.1em;
+}
+
+.arrow {
+    align-items: center;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.inout {
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: #eee;
+
+    font-size: 1rem;
+}
+
+b {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+}
+
+
+.code {
+    margin-top: 2vh;
+    margin-bottom: 15vh;
+}
+
+
+.answer-button {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    color: white;
+    font-size: 1.5rem;
+
+    padding: 10px 30px;
+    border-radius: 20px;
+
+    background-color: #D94F23;
+}
+
+.answer-button:hover {
+    background-color: color-mix(in lab, #D94F23, black 10%);
+}
+
+.answer-button:active {
+    background-color: color-mix(in lab, #D94F23, black 30%);
+    transform: scale(0.98);
+}
+
+#answer {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.answer {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    line-height: 1.7em;
+    letter-spacing: 0.1em;
+}
+

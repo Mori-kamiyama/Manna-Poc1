@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ストライプを書こう</title>
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Prism.jsのスタイルシートを追加 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <!-- Prism.jsのスクリプトを追加 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- C言語用のプラグインを追加 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <link rel="icon" href="../logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <button onclick="location.href='../index.html'" style="cursor: pointer;">
+            <img src="../Icon.png" class="logo">
+        </button>
+        <div class="date-info">
+            <p>Sunday, September 1, 2024</p>
+            <p>No.32</p>
+        </div>
+    </header>
+    <hr>
+    <hr>
+    <main>
+        <div class="title">
+            <h2>No.008</h2>
+        </div>
+        <h1>ストライプを書こう</h1>
+        <p class="statement">ストライプの服を作ろうと思います。<br>
+            最初にストライプの「長さ」を入力。そして、機械にその長さ分だけ「1（塗る）」と「0（塗らない）」を繰り返すように指示を出すプログラムを書いてください。
+        </p>
+
+        <div class="example">
+            <div class="title">
+                <h2>実行例</h2>
+            </div>
+            <div class="inout-container">
+                <pre class="inout">
+<b>Input1</b>
+->5</pre>
+                <p class="arrow">=></p>
+                <pre class="inout">
+<b>Output1</b>
+00000
+11111
+00000
+11111
+00000</pre>
+                <pre class="inout">
+<b>Input2</b>
+->3
+</pre>
+                <p class="arrow">=></p>
+                <pre class="inout">
+<b>Output2</b>
+00000
+11111
+00000</pre>
+            </div>
+        </div>
+
+        <div class="code">
+            <button onclick="answer()" class="answer-button" style="cursor: pointer;">RUN</button>
+            <div id="answer">
+                <h2>回答</h2>
+                <pre class="answer"><code class="language-c">
+#include <stdio.h>
+
+int main(void)
+{
+	int border = 0;
+	int straip = 0;
+	printf("いっぺん=");
+	scanf("%d", &border);
+	straip = border;
+	for (int x = 0;x < straip; x++){
+	    for (int y = 0; y < border; y++){
+	        printf("%d", x % 2)
+	    }
+		  printf("\n");
+	}
+	return 0;
+}
+                </code></pre>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function answer() {
+            var div = document.getElementById("answer");
+            if (div.style.display === "none") {
+                div.style.display = "block";  // 表示にする
+            } else {
+                div.style.display = "none";   // 非表示にする
+            }
+        }
+    </script>
+</body>
+</html>

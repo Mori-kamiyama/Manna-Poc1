@@ -1,0 +1,157 @@
+body {
+    width: 80%;
+    margin: auto;
+}
+
+
+
+main {
+    margin: auto;
+    width: 80%;
+}
+
+.intro {
+    margin-top: 5vh;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    font-family: Inter;
+    font-weight: bold;
+
+    margin-bottom: 0.2em;
+}
+
+.intro-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    margin-bottom: 40px;
+    border-radius: 20px;
+
+    filter: saturate(120%);
+    filter: brightness(95%);
+}
+
+.intro h3 {
+    font-size: 3rem;
+    text-align: right;
+    color: white;
+    font-family: Inter;
+    font-weight: bold;
+
+    position: absolute;
+    top: 70%;
+    right: 22%;
+}
+
+.text-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+
+.text-container p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.7em;
+    letter-spacing: 0.3em;
+}
+
+.text-container .english {
+    letter-spacing: 0.2em;
+}
+
+.problem-collection {
+    margin-top: 12vh;
+    margin-bottom: 12vh;
+}
+
+.problem-collection h2 {
+    font-size: 3rem;
+    font-family: Inter;
+    font-weight: bold;
+
+    margin-bottom: 0.2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    color: #666;
+    font-weight: normal;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+td {
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+tr td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+tr td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.number {
+    color: #80BF8A;
+}
+
+.difficulty {
+    display: inline-block;
+    padding: 2px 24px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.easy {
+    background-color: #98e086;
+}
+
+.normal {
+    background-color: #6dbacc;
+}
+
+.hard {
+    background-color: #D94F23;
+}
+
+.tag {
+    display: inline-block;
+    padding: 2px 24px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-left: 0.4em;
+}
+
+.string {
+    color: #8a2be2;
+    border: 1px solid #8a2be2;
+}
+
+.array {
+    color: #57A664;
+    border: 1px solid #57A664;
+}
+
+.base_number {
+    color: #D94F23;
+    border: 1px solid #D94F23;
+}
+
+.function {
+    color: #027BC5;
+    border: 1px solid #027BC5;
+}

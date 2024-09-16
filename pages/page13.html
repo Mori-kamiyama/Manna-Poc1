@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メニュー表を作る</title>
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Prism.jsのスタイルシートを追加 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <!-- Prism.jsのスクリプトを追加 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- C言語用のプラグインを追加 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <link rel="icon" href="../logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <button onclick="location.href='../index.html'" style="cursor: pointer;">
+            <img src="../Icon.png" class="logo">
+        </button>
+        <div class="date-info">
+            <p>Sunday, September 1, 2024</p>
+            <p>No.32</p>
+        </div>
+    </header>
+    <hr>
+    <hr>
+    <main>
+        <div class="title">
+            <h2>No.013</h2>
+        </div>
+        <h1>メニュー表を作る</h1>
+        <p class="statement">レストランのメニューに対して、最初の1文字を入力すると、それに対応する価格が表示されるプログラムがあります。以下のメニューから1つ選び、その頭文字を入力してください：<br>
+            <br>
+            •	カレー (c): 500円<br>
+            •	ステーキ (s): 600円<br>
+            •	パスタ (p): 650円<br>
+            •	バーガー (b): 450円<br>
+            •	水 (w): 0円<br>
+        </p>
+
+        <div class="example">
+            <div class="title">
+                <h2>実行例</h2>
+            </div>
+            <div class="inout-container">
+                <pre class="inout">
+<b>Input1</b>
+->c</pre>
+                <p class="arrow">=></p>
+                <pre class="inout">
+<b>Output1</b>
+500円です</pre>
+                <pre class="inout">
+<b>Input2</b>
+->w</pre>
+                <p class="arrow">=></p>
+                <pre class="inout">
+<b>Output2</b>
+0円です</pre>
+            </div>
+        </div>
+
+        <div class="code">
+            <button onclick="answer()" class="answer-button" style="cursor: pointer;">RUN</button>
+            <div id="answer">
+                <h2>回答</h2>
+                <pre class="answer"><code class="language-c">
+#include <stdio.h>
+int main(void)
+{
+    char str[20];
+    int i = 0;
+    printf("メニュー=");
+    scanf("%s", str);
+
+    switch(str[i]){
+        case 'c':
+        printf("500円です\n");
+        break;
+    case 's':
+        printf("600円です\n");
+        break;
+    case 'p':
+        printf("650円です\n");
+        break;
+    case 'b':
+        printf("450円です\n");
+        break;
+    case 'w':
+        printf("0円です\n");
+        break;
+    default:
+        break;
+    }
+    return 0;
+}
+                </code></pre>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function answer() {
+            var div = document.getElementById("answer");
+            if (div.style.display === "none") {
+                div.style.display = "block";  // 表示にする
+            } else {
+                div.style.display = "none";   // 非表示にする
+            }
+        }
+    </script>
+</body>
+</html>
