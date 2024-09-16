@@ -1,13 +1,13 @@
 body {
-    width: 80%;
+    width: 90%;
     margin: auto;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-
 
 main {
     margin: auto;
-    width: 80%;
+    width: 70%;
 }
 
 .intro {
@@ -33,17 +33,6 @@ main {
     filter: brightness(95%);
 }
 
-.intro h3 {
-    font-size: 3rem;
-    text-align: right;
-    color: white;
-    font-family: Inter;
-    font-weight: bold;
-
-    position: absolute;
-    top: 70%;
-    right: 22%;
-}
 
 .text-container {
     display: grid;
@@ -132,8 +121,9 @@ tr td:last-child {
     display: inline-block;
     padding: 2px 24px;
     border-radius: 12px;
+    writing-mode: horizontal-tb;
     font-size: 0.8rem;
-    margin-left: 0.4em;
+    margin: 5px 0 5px 0.4em;
 }
 
 .string {
@@ -154,4 +144,52 @@ tr td:last-child {
 .function {
     color: #027BC5;
     border: 1px solid #027BC5;
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 90%;
+    }
+
+    .intro h2 {
+        font-size: 2rem;
+    }
+
+    .intro-image {
+        border-radius: 10px;
+    }
+
+    .text-container {
+        display: block;
+    }
+
+    .text-container p {
+        font-size: 0.7rem;
+    }
+
+    .english {
+        display: none;
+    }
+
+    .problem-collection h2 {
+        font-size: 2rem;
+    }
+
+    th {
+        font-size: 0.7rem;
+    }
+
+    td {
+        font-size: 0.7rem;
+    }
+
+    .difficulty {
+        font-size: 0.5rem;
+        padding: 4px 12px;
+    }
+
+    .tag {
+        font-size: 0.5rem;
+        padding: 4px 12px;
+    }
 }

@@ -2,17 +2,14 @@ header {
     padding-top: 5vh;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap the elements if necessary */
 }
 
 .logo {
-    width: 300px;
+    width: 260px; /* Adjusted width for smaller screens */
 }
 
-.logo h1 {
-    font-size: 3rem;
-    margin: 0;
-}
 
 .date-info {
     text-align: right;
@@ -22,7 +19,7 @@ header {
 }
 
 .date-info p {
-    margin: 0;
+    vertical-align: middle;
 }
 
 hr {
@@ -35,4 +32,39 @@ button {
     background: none;
     margin: 0;
     padding: 0;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        padding-top: 2vh;
+    }
+
+    .logo {
+        width: 170px; /* Smaller width for smaller screens */
+    }
+
+
+    .date-info {
+        font-size: 0.9rem; /* Smaller font size */
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding-top: 0vh;
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    .logo {
+        width: 240px; /* Even smaller width */
+    }
+
+    .date-info {
+        display: none;
+    }
 }
