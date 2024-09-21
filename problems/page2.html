@@ -42,9 +42,7 @@
             <h2>実行例</h2>
         </div>
         <div class="inout-container">
-                <pre class="inout">
-<b>Input1</b>
-</pre>
+            <pre class="inout"><b>Input1</b></pre>
             <p class="arrow">=></p>
             <pre class="inout">
 <b>Output1</b>
@@ -53,7 +51,7 @@ Hello
 Hello
 Hello
 Hello</pre>
-    </div>
+        </div>
 
     <div class="code">
         <button onclick="answer()" class="answer-button" style="cursor: pointer;">RUN</button>
@@ -63,19 +61,34 @@ Hello</pre>
 #include &lt;stdio.h&gt;
 int main(void)
 {
-    char name[5][10];
-    int i, j;
-    for (i = 0; i &lt; 5; i++){
-        printf("名簿=");
-        scanf("%s", name[i]);
+    for ( i = 0; i < 5; i++ ){ //for文を使って特定回数繰り返す
+        printf("Hello\n");
     }
-    printf("参加者=");
-    scanf("%d", &i);
-    printf("%s\n", name[i]);
-
-    return 0;
+return 0;
 }
-                </code></pre>
+            </code></pre>
+            <h2>解説</h2>
+            <p>このコードでのポイントはfor文です。<br>
+                ここでは、while文との違いがポイントになってきます。
+            </p>
+            <pre class="answer"><code class="language-c">
+//for文
+for ( i = 0; i < 5; i++ ){
+    //繰り返すコード
+}
+
+//while文
+int i = 0;
+while ( i < 5 ){
+    //繰り返すコード
+    i++;
+}
+            </code></pre>
+            <p>このコードは同じく5回繰り返すコードです。しかしfor文の方がスマートであることがわかると思います。</p>
+            <p>for文はループの初期化、条件判定、更新を一行でまとめて書けるため、コードが見やすく整理されているのが特徴です。<br>
+                特に、ループの繰り返し回数が決まっている場合や、カウンタ変数を用いた繰り返し処理に向いています。<br>
+                これに対してwhile文は、初期化や更新をループ外で行う必要があるため、コードは煩雑化しやすく、ミスの原因となることもあります。</p>
+            <p>この問題はまだ簡単ですが、こういったミスをなくす癖をなくすために、for文を用いて問題を解きましょう。</p>
         </div>
     </div>
 </main>

@@ -34,7 +34,7 @@
             <h2>No.001</h2>
         </div>
         <h1>100まで足し続ける</h1>
-        <p class="statement">入力された数を足していって、100を超えたら、「100を超えましたと表示してください」
+        <p class="statement">入力された数を足していって、100を超えたら、「100を超えました」と表示してください。
         </p>
 
         <div class="example">
@@ -67,22 +67,54 @@
             <div id="answer">
                 <h2>回答</h2>
                 <pre class="answer"><code class="language-c">
-#include &lt;stdio.h&gt;
-int main(void)
-{
-    char name[5][10];
-    int i, j;
-    for (i = 0; i &lt; 5; i++){
-        printf("名簿=");
-        scanf("%s", name[i]);
+#include <stdio.h>
+
+int main() {
+    int sum = 0;  // 合計値を初期化
+    int input;    // 入力される数値を格納する変数
+
+    // ループを使って数を足していく
+    while (sum <= 100) {
+        printf("-> ");
+        scanf("%d", &input);  // ユーザからの入力を取得
+        sum += input;         // 入力された数を合計に加算
+
+        // 100を超えたらメッセージを表示
+        if (sum > 100) {
+            printf("100を超えました。\n");
+        }
     }
-    printf("参加者=");
-    scanf("%d", &i);
-    printf("%s\n", name[i]);
 
     return 0;
 }
                 </code></pre>
+                <h2>解説</h2>
+                <span>ここでポイントなのは　</span><code class="language-c">sum = 0;</code><span>　です。</span>
+                <p>変数を定義するだけでなく、初期化することで正しく合計値を測ることができます。<br>
+                    変数は内部的にはこのように保存されています。
+                </p>
+                <code class="language-c">
+                    [1][0][1]...[0][1][1]
+                </code>
+                <p>このとき変数を定義しただけだと、あなたのパソコンのメモリにこのように場所が割り当てられるだけです。<br>
+                    メモリはプログラミング以外にもゲームやアプリケーションの実行で使われるので場所が割り当てられても前に使ったデータがそのままになっていることがあります。<br>
+                    移動教室で一つ前の人が机に本やゴミを置きっぱなしにしているようなものです。<br>
+                    そのため一度初期化することで正しく足していくことができます。
+                </p>
+                <p>次に、whileを使って初期化されたsumが100を超えるまで繰り返します。</p>
+                <pre><code class="language-c">
+while (sum <= 100) {
+    printf("-> ");
+    scanf("%d", &input);  // ユーザからの入力を取得
+    sum += input;         // 入力された数を合計に加算
+
+    // 100を超えたらメッセージを表示
+    if (sum > 100) {
+        printf("100を超えました。\n");
+    }
+}</code></pre>
+                <p>これで入力された数を足していって、100を超えたら、「100を超えました」と表示することができます。</p>
+
             </div>
         </div>
     </main>
