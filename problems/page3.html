@@ -68,17 +68,34 @@ Hello</pre>
                 <h2>回答</h2>
                 <pre class="answer"><code class="language-c">
 #include <stdio.h>
-int main(void)
-{
-int x = 0;
-printf("x=");
-scanf("%d", &x);
-for (int i = 0; i < x; i++){
-printf("Hello\n");
-}
-return 0;
+
+int main() {
+    int count;  // 繰り返す回数を格納する変数
+
+    printf("-> ");
+    scanf("%d", &count);  // ユーザーから繰り返す回数を入力してもらう
+
+    // 繰り返し処理を行う
+    for(int i = 0; i < count; i++) {
+        printf("Hello\n");
+    }
+
+    return 0;
 }
                 </code></pre>
+                <h2>解説</h2>
+                <p>この問題のポイントは、scanf関数によって変数 count に値を代入し、その回数分繰り返すことです。<br>
+                </p>
+                <span>この<code class="language-c">scanf( "%d", &count );</code>という並びで注目して欲しいのが、<code class="language-c">"%d"</code>と<code class="language-c">&count</code>です。</span>
+                <p>この場合、変換指定子を<code class="language-c">"%d"</code>としているので、入力を整数として扱います。<br>
+                    これによりfor文で条件にcountをつかっても整数として正しく認識され繰り返すことができます。
+                </p>
+                <p>次に、アドレス指定子を<code class="language-c">&count</code>としています。<br>
+                    このアドレス指定子はどの変数に値を入れるかを指定していて、＆の後の変数、今回はcountに格納されます。
+                </p>
+                <p>この二つを正しく使うことで、「繰り返す回数を入力から受け取って、その回数分「Hello」と言う」ことができます。</p>
+
+                <p>執筆者　森川結太</p>
             </div>
         </div>
     </main>

@@ -34,7 +34,7 @@
             <h2>No.011</h2>
         </div>
         <h1>文字列の長さを測る</h1>
-        <p class="statement">文字列を受け取って、その長さを測ってください。
+        <p class="statement">文字列を受け取って、その長さを測ってください。（ただし、入力は50文字以内）
         </p>
 
         <div class="example">
@@ -73,7 +73,7 @@ int main(void)
 
     printf("入力=");
     scanf("%s", word);
-    while(word[i] !='\0'){
+    while(word[i] !='\0'){ //null文字（文字列の最後）まで文字数を一つずつカウントする
        count ++;
        i++;
     }

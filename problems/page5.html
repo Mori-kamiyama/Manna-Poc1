@@ -76,15 +76,17 @@
 #include <stdio.h>
 int main(void)
 {
-int x, y;
-printf("x=");
-scanf("%d", &x);
-printf("y=");
-scanf("%d", &y);
-for (int i = x; i <= y; i++){
-printf("%d\n", i);
-}
-return 0;
+    //xとyを受け取る
+    int x, y;
+    printf("x=");
+    scanf("%d", &x);
+    printf("y=");
+    scanf("%d", &y);
+    //xからy未満の間繰り返す
+    for (int i = x; i <= y; i++){
+        printf("%d\n", i);
+    }
+    return 0;
 }
                 </code></pre>
             </div>
